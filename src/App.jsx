@@ -1,5 +1,5 @@
-import AboutMe from "./pages/About Me"
-import ContactMe from "./pages/Contact Me/INDEX.JSX"
+import AboutMe from "./pages/AboutMe"
+import ContactMe from "./pages/Contact/INDEX.JSX"
 import Home from "./pages/Home"
 import Projects from "./pages/Projects";
 
@@ -9,8 +9,8 @@ function App() {
     <>
       <Home/>
       <AboutMe/>
-      <ContactMe/>
       <Projects/>
+      <ContactMe/>
     </>
   )
 }
