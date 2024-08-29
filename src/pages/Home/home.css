@@ -16,6 +16,9 @@
 }
 
 .hero-container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     padding: 1rem;
     z-index: 1; /* Ensure the header is above the image */
@@ -23,6 +26,16 @@
 
 .hero-container__brandname {
     color: #F9F9F9;
+}
+
+.hero-container__nav {
+   
+}
+
+.hero__menu {
+    width: 1.5rem; 
+    height: 1.5rem; 
+    cursor: pointer;
 }
 
 .hero-container__section {
@@ -65,3 +78,8 @@
     margin-left: .4rem;
 }
 
+@media screen and (max-width: 602px) {
+    .hero__menu-desktop {
+        display: none;
+    }
+}
