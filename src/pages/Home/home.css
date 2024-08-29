@@ -1,0 +1,67 @@
+.hero-container {
+    position: relative;
+    height: 100vh; /* Make the container full screen */
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Make sure the image stays in the background */
+}
+
+.hero-container__header {
+    position: relative;
+    padding: 1rem;
+    z-index: 1; /* Ensure the header is above the image */
+}
+
+.hero-container__brandname {
+    color: #F9F9F9;
+}
+
+.hero-container__section {
+    position: relative;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the section is above the image */
+    color: white;
+    font-size: 2rem;
+}
+
+.hero-container__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container__btn {
+    display: flex;
+    width: 12rem;
+    margin-top: 5rem;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #010C15;
+    color: #F9F9F9;
+    border-radius: 2rem;
+    border: 2px;
+    border-color: #E6E6E6;
+    cursor: pointer;
+}
+
+.hero-container__btn-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: .4rem;
+}
+
