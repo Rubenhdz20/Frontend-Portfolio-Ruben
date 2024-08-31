@@ -25,8 +25,8 @@ function Home() {
                         <MobileMenu onClose={toggleMobileMenu} className={isMobileMenuOpen ? 'mobile-container activein' : 'mobile-container activeout'} />
                     </>
             )}
-            <div className="hero-container">
-                <img src="public/backgroundImg.jpg" alt="Creating code with my laptop" />
+            <section className="hero-container">
+                <img src="/backgroundImg.jpg" alt="Creating code with my laptop" />
                 <header className="hero-container__header">
                     <p className="hero-container__brandname">RubDev</p>
                     <nav className="hero-container__nav">
@@ -77,7 +77,7 @@ function Home() {
                         </ul>
                     </nav>
                 </header>
-                <section className="hero-container__section">
+                <div className="hero-container__section">
                     <div className="hero-container__content">
                         <p>Hello, I am Ruben</p>
                         <p>Frontend Developer</p>
@@ -89,8 +89,8 @@ function Home() {
                         </svg>
                         </button>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </>
     )
 }

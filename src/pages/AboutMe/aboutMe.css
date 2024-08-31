@@ -1,0 +1,97 @@
+
+.aboutme-section {
+    background-color: #010C15;
+    color: #F9F9F9;
+}
+
+.aboutme-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.aboutme-section__content--title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.aboutme-section__content--avatar {
+    width: 13rem;
+    height: 14rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 3rem;
+}
+
+.aboutme-section__content--description {
+    padding: 1rem;
+}
+
+.aboutme-section__work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-section__work--title {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.33px;
+}
+
+.aboutme-section__work--reasons {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 3.6rem;
+    padding: .5rem 0px;
+    gap: .7rem;
+    border-radius: .5rem;
+    border: 2px solid #152E77; 
+}
+
+.aboutme-section__tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-section__tech--title {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.33px;
+}
+
+.aboutme-section__tech--container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4rem;
+}
+
+.aboutme-section__tech--svgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97px;
+    height: 75px;
+    border-radius: 0.5rem;
+    border: 2px solid #152E77;
+}
