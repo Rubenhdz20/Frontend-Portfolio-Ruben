@@ -1,0 +1,65 @@
+.projects-section {
+    background-color: #010C15;
+    color: #F9F9F9;
+}
+
+.projects-section__title {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.projects-section__container-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.projects-section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem;
+    height: 30rem;
+    margin-bottom: 5rem;
+    border-radius: 1.2rem;
+    border: 2.5px solid #152E77;
+}
+
+.projects-section__card--img {
+    width:  inherit;
+    border-radius: 1rem;
+}
+
+.projects-section__card--title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.projects-section__card--description {
+    padding: .3rem;
+    font-size: 1rem;
+}
+
+.projects-section__card--stack {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.projects-section__card--technology {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
+    height: 23px;
+    border-radius: 8px;
+    background: #152E77;
+}

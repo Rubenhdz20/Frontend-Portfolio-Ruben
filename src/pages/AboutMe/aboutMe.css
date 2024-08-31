@@ -23,7 +23,7 @@
     height: 14rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    border-radius: 3rem;
+    border-radius: 10rem;
 }
 
 .aboutme-section__content--description {
@@ -59,11 +59,11 @@
     border: 2px solid #152E77; 
 }
 
-.aboutme-section__tech {
+/* .aboutme-section__tech {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .aboutme-section__tech--title {
     margin-top: 4rem;
@@ -76,12 +76,12 @@
 
 .aboutme-section__tech--container {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    gap: .6rem;
     margin-bottom: 4rem;
 }
 
@@ -90,8 +90,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 97px;
-    height: 75px;
+    width: 5.5rem;
+    height: 4.6rem;
     border-radius: 0.5rem;
     border: 2px solid #152E77;
+}
+
+.aboutme-section__tech--text {
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.aboutme-section__tech--figma {
+    width: 41px;
 }
