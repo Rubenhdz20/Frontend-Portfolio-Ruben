@@ -63,3 +63,29 @@
     border-radius: 8px;
     background: #152E77;
 }
+
+.projects-section__card--links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .4rem; 
+}
+
+.projects-section__card--code {
+    font-size: .9rem;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F9F9F9;
+    cursor: pointer;
+}
+
+.projects-section__card--website {
+    font-size: .9rem;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F9F9F9;
+}
