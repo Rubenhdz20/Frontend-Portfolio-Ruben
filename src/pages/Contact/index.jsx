@@ -1,22 +1,47 @@
+import React, { useState, useRef } from 'react';
 import '../Contact/contact.css';
 
 function ContactMe() {
+    const [copied, setCopied] = useState(false); 
+    const copiedTextRef = useRef(null); 
+
+    const handleEmailClick = () => {
+        const email = 'rubhernandez42@gmail.com';
+        
+        window.location.href = `mailto:${email}`;
+    };
+
+    const copyToClipboard = async () => {
+        try {
+          const buttonText = document.getElementById('copyButton').textContent;
+          await navigator.clipboard.writeText(buttonText);
+          setCopied(true); 
+        } catch (err) {
+          console.error('Failed to copy text:', err);
+        }
+    };
+    
+    const handleCopyClick = () => {
+        copyToClipboard();
+        setTimeout(() => {
+          setCopied(false); 
+        }, 1000); 
+    };
+
     return(
         <section className='section-contact'>
             <h1 className='section-contact__title'>Let's work together!</h1>
             <p className='section-contact__description'>Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking.  I am currently looking for new opportunities, my email is open! 
             </p>
             <div className='section-contact__email'>
-                <p  className='section-contact__email--user'>rubhernandez42@gmail.com</p>
-                <button className='section-contact__email--send'>
-                    <svg width="34" height="25" viewBox="0 0 34 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.5 10C0.5 4.75329 4.7533 0.5 10 0.5H24C29.2467 0.5 33.5 4.75329 33.5 10V15C33.5 20.2467 29.2467 24.5 24 24.5H10C4.75329 24.5 0.5 20.2467 0.5 15V10Z" fill="white" stroke="#010C15"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6719 7.75C12.6105 7.75 11.75 8.61045 11.75 9.67188V20.0781C11.75 21.1395 12.6105 22 13.6719 22H24.0781C25.1395 22 26 21.1395 26 20.0781V9.67188C26 8.61045 25.1395 7.75 24.0781 7.75H13.6719ZM10.25 9.67188C10.25 7.78203 11.782 6.25 13.6719 6.25H24.0781C25.968 6.25 27.5 7.78203 27.5 9.67188V20.0781C27.5 21.968 25.968 23.5 24.0781 23.5H13.6719C11.782 23.5 10.25 21.968 10.25 20.0781V9.67188Z" fill="#010C15"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2478 2.5L10.25 2.5H20.375L20.3771 2.5C21.2709 2.50255 22.1273 2.85872 22.7593 3.4907C23.3913 4.12268 23.7475 4.97911 23.75 5.87287C23.75 5.87879 23.75 5.8847 23.7498 5.89062L23.7264 7.01562C23.7178 7.42975 23.3751 7.75846 22.9609 7.74984C22.5468 7.74121 22.2181 7.3985 22.2267 6.98438L22.25 5.86902C22.2464 5.37454 22.0484 4.90117 21.6986 4.55136C21.3471 4.19987 20.8709 4.00167 20.3738 4H10.2512C9.65478 4.00203 9.08335 4.23986 8.66161 4.66161C8.23986 5.08335 8.00203 5.65478 8 6.25119V16.3738C8.00167 16.8709 8.19987 17.3471 8.55136 17.6986C8.90287 18.0501 9.37913 18.2483 9.87621 18.25H11C11.4142 18.25 11.75 18.5858 11.75 19C11.75 19.4142 11.4142 19.75 11 19.75H9.875L9.87287 19.75C8.97911 19.7475 8.12268 19.3913 7.4907 18.7593C6.85872 18.1273 6.50255 17.2709 6.5 16.3771L6.5 16.375V6.25L6.5 6.24778C6.50294 5.25471 6.89874 4.30315 7.60094 3.60094C8.30315 2.89874 9.25471 2.50294 10.2478 2.5Z" fill="#010C15"/>
-                    </svg>
-                </button>   
-                <button className='section-contact__email--send'>
-                    <svg width="34" height="25" viewBox="0 0 34 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button  className='section-contact__email--user' id="copyButton" onClick={handleCopyClick}>rubhernandez42@gmail.com</button>
+                {copied && (
+                    <span ref={copiedTextRef} className='contact__container--message'>
+                        Copied!
+                    </span>
+                )}
+                <button className='section-contact__email--send' onClick={handleEmailClick}>
+                    <svg className='section-contact__email--svg' viewBox="0 0 34 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.5 10C0.5 4.75329 4.7533 0.5 10 0.5H24C29.2467 0.5 33.5 4.75329 33.5 10V15C33.5 20.2467 29.2467 24.5 24 24.5H10C4.75329 24.5 0.5 20.2467 0.5 15V10Z" fill="white" stroke="#010C15"/>
                         <path d="M23.5378 6.32194L15.8828 13.9588C16.1098 14.283 16.3028 14.6332 16.4578 15.0043L18.3678 19.5924L23.5378 6.32095V6.32194ZM14.5358 12.615L22.1918 4.97714L8.88877 10.1349L13.4878 12.0414C13.8569 12.1941 14.2083 12.3864 14.5358 12.615ZM26.1538 4.77163L20.1268 20.2409C19.7468 21.2186 18.6498 21.7204 17.6778 21.3622C17.441 21.2749 17.2249 21.1397 17.043 20.9651C16.8611 20.7905 16.7173 20.5803 16.6208 20.3476L14.7108 15.7595C14.3391 14.8654 13.627 14.155 12.7308 13.7842L8.13077 11.8787C7.17677 11.4827 6.74077 10.3823 7.15877 9.41859C7.26126 9.18311 7.40946 8.9702 7.59482 8.79213C7.78017 8.61406 7.99903 8.47435 8.23877 8.38105L23.7448 2.36634C24.0817 2.23088 24.4511 2.19727 24.807 2.26968C25.163 2.34209 25.4897 2.51732 25.7466 2.77358C26.0034 3.02983 26.1791 3.35578 26.2517 3.71087C26.3242 4.06596 26.2905 4.4345 26.1548 4.77063L26.1538 4.77163Z" fill="#010C15"/>
                     </svg>

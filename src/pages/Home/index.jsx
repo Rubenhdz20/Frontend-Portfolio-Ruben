@@ -79,8 +79,8 @@ function Home() {
                 </header>
                 <div className="hero-container__section">
                     <div className="hero-container__content">
-                        <p>Hello, I am Ruben</p>
-                        <p>Frontend Developer</p>
+                        <p>Hello, I am <span className='hero-container__name'>Ruben</span></p>
+                        <p className='hero-container__name'>Frontend <span className='hero-container__position'>Developer</span></p>
                         <button className="hero-container__btn">
                             Download CV
                             <svg className='hero-container__btn-svg' viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">

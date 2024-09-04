@@ -30,10 +30,11 @@
 }
 
 .mobile-close {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-top: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 .mobile-list {
@@ -60,6 +61,11 @@
     cursor: pointer;
     background-color: #152E77;
     border-radius: .5rem;
+    transition: background-color 0.3s;
+}
+
+.mobile-list__item:hover {
+    background-color: #0056b3;
 }
 
 .mobile-list__link {
@@ -88,4 +94,32 @@
     cursor: pointer;
     background-color: #152E77;
     border-radius: .5rem;
+    transition: background-color 0.3s;
+}
+
+.mobile-list__item--functions:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .mobile-close {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .mobile-list__item {
+        width: 16rem;
+    }
+
+    .mobile-list__link {
+        font-size: 1.5rem;
+    }
+
+    .mobile-list__item--container {
+        gap: 6rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    
 }

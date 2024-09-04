@@ -5,6 +5,7 @@
 
 .projects-section__title {
     margin-top: 5rem;
+    padding: 1rem;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
@@ -27,6 +28,13 @@
     margin-bottom: 5rem;
     border-radius: 1.2rem;
     border: 2.5px solid #152E77;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.projects-section__card:hover {
+    transform: translateY(-5px); 
+    background-color: #232946; 
 }
 
 .projects-section__card--img {
@@ -88,4 +96,12 @@
     font-weight: 600;
     text-decoration: none;
     color: #F9F9F9;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  
+}
+
+@media screen and (min-width: 1025px) {
+    
 }

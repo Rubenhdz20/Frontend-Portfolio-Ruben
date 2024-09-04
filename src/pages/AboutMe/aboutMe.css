@@ -57,17 +57,24 @@
     gap: .7rem;
     border-radius: .5rem;
     border: 2px solid #152E77; 
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* .aboutme-section__tech {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.aboutme-section__work--reasons:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+    background-color: #2d3559; /* Slightly lighter background on hover */
+}
+
+.aboutme-section__work--svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
 .aboutme-section__tech--title {
     margin-top: 4rem;
     margin-bottom: 4rem;
+    padding: 1rem;
     font-size: 1.7rem;
     font-style: normal;
     font-weight: 700;
@@ -104,4 +111,58 @@
 
 .aboutme-section__tech--figma {
     width: 41px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .aboutme-section__content--title {
+        font-size: 2.5rem;
+    }
+
+    .aboutme-section__content--description {
+        font-size: 1.4rem;
+    }
+
+    .aboutme-section__work--title {
+        font-size: 2rem;
+    }
+
+    .aboutme-section__container-reasons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center;
+        align-content: center;
+        gap: .5rem;
+    }
+
+    .aboutme-section__work--reasons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18rem;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .aboutme-section__work--text {
+        font-size: 1.3rem;
+    }
+
+    .aboutme-section__work--svg {
+        width: 2rem;
+        margin-right: 10px;
+    }
+
+    .aboutme-section__tech--title {
+        font-size: 2rem;
+    }
+
+    .aboutme-section__tech--container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: .6rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    
 }
