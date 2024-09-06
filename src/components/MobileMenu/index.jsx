@@ -1,63 +1,42 @@
+import React, { useContext } from 'react';
+import { LanguageContext } from '../../context/languageProvider';
 import './MobileMenu.css';
 
-const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'AboutMe', href: '#' },
-    { name: 'Projects', href: '#' },
-    { name: 'Contact', href: '#' },
-]
-
 const MobileMenu = ({ className, onClose }) => {
+  const { translations, toggleLanguage } = useContext(LanguageContext);
+
+  const navigation = [
+    { name: translations.home, sectionId: 'home', href: '#home' },
+    { name: translations.aboutMe, sectionId: 'about-me', href: '#about-me' },
+    { name: translations.myWork, sectionId: 'mywork', href: '#mywork' },
+    { name: translations.contact, sectionId: 'contact', href: '#contact' },
+  ];
+
+  function handleScroll(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+  } 
+
   return (
     <nav className={className}>
       <svg className='mobile-close' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClose}>
         <path d="M31.6668 10.6835L29.3168 8.3335L20.0002 17.6502L10.6835 8.3335L8.3335 10.6835L17.6502 20.0002L8.3335 29.3168L10.6835 31.6668L20.0002 22.3502L29.3168 31.6668L31.6668 29.3168L22.3502 20.0002L31.6668 10.6835Z" fill="white"/>
       </svg>
       <ul className='mobile-list'>
-        <li className='mobile-list__item' onClick={() => {
-              onClose();
-              const home = document.getElementById('home');
-              if (home) {
-                home.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}>
-          <a className="mobile-list__link">
-            Home
-          </a>
-        </li>
-        <li className='mobile-list__item' onClick={() => {
-              onClose();
-              const aboutMe = document.getElementById('about-me');
-              if ( aboutMe) {
-                aboutMe.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}>
-          <a className="mobile-list__link">
-            About Me
-          </a>
-        </li>
-        <li className='mobile-list__item' onClick={() => {
+        {navigation.map((item, index) => (
+            <li key={index} className='mobile-list__item' 
+              onClick={(e) => {
                 onClose();
-                const myWorkSection = document.getElementById('mywork');
-                if (myWorkSection) {
-                  myWorkSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}>
-          <a className="mobile-list__link">
-            Projects
-          </a>
-        </li>
-        <li className='mobile-list__item' onClick={() => {
-              onClose();
-              const contactSection = document.getElementById('contact');
-              if ( contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
+                e.preventDefault(); 
+                handleScroll(item.sectionId);
             }}>
-          <a className="mobile-list__link">
-            Contact
-          </a>
-        </li>
+                <a className='mobile-list__link' href={item.href}>
+                  {item.name}
+                </a>
+            </li>
+        ))}
         <div className='mobile-list__item--container'>
             <li className='mobile-list__item--functions'>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,8 +51,8 @@ const MobileMenu = ({ className, onClose }) => {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 7.5C8.84315 7.5 7.5 8.84315 7.5 10.5C7.5 12.1569 8.84315 13.5 10.5 13.5C12.1569 13.5 13.5 12.1569 13.5 10.5C13.5 8.84315 12.1569 7.5 10.5 7.5ZM6 10.5C6 8.01472 8.01472 6 10.5 6C12.9853 6 15 8.01472 15 10.5C15 12.9853 12.9853 15 10.5 15C8.01472 15 6 12.9853 6 10.5Z" fill="white"/>
                 </svg>
             </li>
-            <li className='mobile-list__item--functions'>
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <li className='mobile-list__item--functions' onClick={toggleLanguage}>
+                <svg width="21" height="20"  viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 3.75C0.3375 3.75 0 3.4125 0 3C0 2.5875 0.3375 2.25 0.75 2.25H6.75V0.75C6.75 0.3375 7.0875 0 7.5 0C7.9125 0 8.25 0.3375 8.25 0.75V2.25H11.6627C11.6753 2.24968 11.6881 2.24967 11.7008 2.25H14.25C14.6625 2.25 15 2.5875 15 3C15 3.4125 14.6625 3.75 14.25 3.75H12.2461C11.8598 5.0058 10.7672 8.11527 8.74697 10.7732C9.87784 12.0391 10.8018 12.7849 10.9339 12.8915C10.9438 12.8995 10.9501 12.9047 10.9501 12.9047C11.2782 13.1578 11.3391 13.6313 11.086 13.9547C10.9454 14.1516 10.7251 14.25 10.5001 14.25C10.3407 14.25 10.1813 14.1984 10.0407 14.0953C10.0388 14.0938 10.0357 14.0914 10.0316 14.0881C9.91831 13.9986 8.9751 13.2533 7.78319 11.9414C5.28162 14.7826 2.85697 16.2585 2.64128 16.3898L2.62973 16.3969C2.51254 16.4672 2.38129 16.5 2.25004 16.5C1.99223 16.5 1.74379 16.3687 1.60316 16.1297C1.39223 15.7734 1.50941 15.314 1.86566 15.1031C1.89219 15.0898 4.34557 13.6171 6.79922 10.7872C6.70979 10.6754 6.6199 10.5609 6.52974 10.4438C4.77193 8.16563 3.86724 6.41719 3.82974 6.34219C3.64224 5.97188 3.78755 5.52188 4.15318 5.33438C4.52349 5.14688 4.97349 5.29219 5.16099 5.65782C5.17037 5.67657 6.04693 7.36407 7.71099 9.52501C7.72721 9.54607 7.74342 9.56705 7.75963 9.58795C9.29457 7.4692 10.2336 5.04722 10.6675 3.75H0.75Z" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.25 19.5C19.9594 19.5 19.6828 19.3312 19.561 19.0453L18.4701 16.5H13.0299L11.9391 19.0453C11.775 19.425 11.3344 19.6031 10.9547 19.4391C10.575 19.275 10.3969 18.8344 10.561 18.4547L15.061 7.95469C15.1782 7.67812 15.45 7.5 15.75 7.5C16.05 7.5 16.3219 7.67812 16.4391 7.95469L20.9391 18.4547C21.1032 18.8344 20.925 19.275 20.5453 19.4391C20.4469 19.4813 20.3485 19.5 20.25 19.5ZM17.8273 15L15.75 10.1531L13.6728 15H17.8273Z" fill="white"/>
                 </svg>

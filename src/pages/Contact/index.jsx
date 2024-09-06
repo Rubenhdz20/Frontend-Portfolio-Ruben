@@ -1,13 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import { LanguageContext } from '../../context/languageProvider';
 import './contact.css';
 
 function ContactMe() {
     const [copied, setCopied] = useState(false); 
     const copiedTextRef = useRef(null); 
+    const { translations } = useContext(LanguageContext);
 
     const handleEmailClick = () => {
         const email = 'rubhernandez42@gmail.com';
-        
         window.location.href = `mailto:${email}`;
     };
 
@@ -30,16 +31,16 @@ function ContactMe() {
 
     return(
         <section id='contact' className='section-contact'>
-            <h1 className='section-contact__title'>Let's work together!</h1>
+            <h1 className='section-contact__title'>{translations.contactTitle}</h1>
             <div className='section-contact__container-description'>
-                <p className='section-contact__description'>Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking.<br></br>I am currently looking for new opportunities, my email is open! 
+                <p className='section-contact__description'>{translations.contactDescription}
                 </p>
             </div>
             <div className='section-contact__email'>
                 <button  className='section-contact__email--user' id="copyButton" onClick={handleCopyClick}>rubhernandez42@gmail.com</button>
                 {copied && (
                     <span ref={copiedTextRef} className='contact__container--message'>
-                        Copied!
+                        {translations.contactSpan}
                     </span>
                 )}
                 <button className='section-contact__email--send' onClick={handleEmailClick}>
@@ -61,7 +62,7 @@ function ContactMe() {
                     </svg>
                 </a>
             </div>
-            <p className='section-contact__credits'>Design & Built by Ruben</p>
+            <p className='section-contact__credits'>{translations.contactCredits}</p>
         </section>
 
     )

@@ -157,6 +157,11 @@
         border-radius: 1rem;
     }
 
+    .hero__menu-desktop--a {
+        color: #F9F9F9;
+        text-decoration: none;
+    }
+
     .hero-container__content p,
     .hero-container__content span {
         font-size: 3rem;
