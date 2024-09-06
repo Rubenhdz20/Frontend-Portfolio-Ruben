@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import '../Contact/contact.css';
+import './contact.css';
 
 function ContactMe() {
     const [copied, setCopied] = useState(false); 
@@ -29,10 +29,12 @@ function ContactMe() {
     };
 
     return(
-        <section className='section-contact'>
+        <section id='contact' className='section-contact'>
             <h1 className='section-contact__title'>Let's work together!</h1>
-            <p className='section-contact__description'>Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking.  I am currently looking for new opportunities, my email is open! 
-            </p>
+            <div className='section-contact__container-description'>
+                <p className='section-contact__description'>Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking.<br></br>I am currently looking for new opportunities, my email is open! 
+                </p>
+            </div>
             <div className='section-contact__email'>
                 <button  className='section-contact__email--user' id="copyButton" onClick={handleCopyClick}>rubhernandez42@gmail.com</button>
                 {copied && (

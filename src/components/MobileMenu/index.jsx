@@ -8,54 +8,53 @@ const navigation = [
 ]
 
 const MobileMenu = ({ className, onClose }) => {
-    
   return (
     <nav className={className}>
       <svg className='mobile-close' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClose}>
         <path d="M31.6668 10.6835L29.3168 8.3335L20.0002 17.6502L10.6835 8.3335L8.3335 10.6835L17.6502 20.0002L8.3335 29.3168L10.6835 31.6668L20.0002 22.3502L29.3168 31.6668L31.6668 29.3168L22.3502 20.0002L31.6668 10.6835Z" fill="white"/>
       </svg>
       <ul className='mobile-list'>
-        <li className='mobile-list__item'>
-          <a className="mobile-list__link" onClick={() => {
+        <li className='mobile-list__item' onClick={() => {
               onClose();
-              const aboutUsSection = document.getElementById('home');
-              if (aboutUsSection) {
-                aboutUsSection.scrollIntoView({ behavior: 'smooth' });
+              const home = document.getElementById('home');
+              if (home) {
+                home.scrollIntoView({ behavior: 'smooth' });
               }
             }}>
+          <a className="mobile-list__link">
             Home
           </a>
         </li>
-        <li className='mobile-list__item'>
-          <a className="mobile-list__link" onClick={() => {
+        <li className='mobile-list__item' onClick={() => {
               onClose();
-              const weDoSection = document.getElementById('aboutMe');
-              if ( weDoSection) {
-                weDoSection.scrollIntoView({ behavior: 'smooth' });
+              const aboutMe = document.getElementById('about-me');
+              if ( aboutMe) {
+                aboutMe.scrollIntoView({ behavior: 'smooth' });
               }
             }}>
+          <a className="mobile-list__link">
             About Me
           </a>
         </li>
-        <li className='mobile-list__item'>
-          <a className="mobile-list__link" onClick={() => {
+        <li className='mobile-list__item' onClick={() => {
                 onClose();
-                const ourWorkSection = document.getElementById('projects');
-                if (ourWorkSection) {
-                  ourWorkSection.scrollIntoView({ behavior: 'smooth' });
+                const myWorkSection = document.getElementById('mywork');
+                if (myWorkSection) {
+                  myWorkSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
+          <a className="mobile-list__link">
             Projects
           </a>
         </li>
-        <li className='mobile-list__item'>
-          <a className="mobile-list__link" onClick={() => {
+        <li className='mobile-list__item' onClick={() => {
               onClose();
               const contactSection = document.getElementById('contact');
               if ( contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}>
+          <a className="mobile-list__link">
             Contact
           </a>
         </li>

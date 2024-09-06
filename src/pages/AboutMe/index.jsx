@@ -1,8 +1,8 @@
-import '../AboutMe/aboutMe.css'
+import './aboutMe.css'
 
 function AboutMe() {
     return(
-        <section className="aboutme-section">
+        <section id='about-me' className="aboutme-section">
             <div className="aboutme-section__content">
                 <h1 className="aboutme-section__content--title">About Me</h1>
                 <img className="aboutme-section__content--avatar" src="/selfie.jpeg" alt="Selfie living an adventure" />
@@ -18,7 +18,7 @@ function AboutMe() {
                             <path d="M6.14067 9.18281C4.49067 9.18281 3.04223 7.65 2.9063 5.76563C2.83598 4.8 3.13598 3.90938 3.74536 3.25313C4.35005 2.60625 5.19848 2.25 6.13598 2.25C7.0688 2.25 7.91723 2.61094 8.52192 3.2625C9.13598 3.92344 9.43598 4.81406 9.36567 5.77031C9.23911 7.65 7.78598 9.18281 6.14067 9.18281ZM6.14067 3.74531C5.62505 3.74531 5.16567 3.93281 4.84692 4.275C4.5188 4.62656 4.36411 5.10469 4.4063 5.65781C4.48598 6.75469 5.27817 7.68281 6.14067 7.68281C7.00317 7.68281 7.80005 6.75469 7.87505 5.65781C7.91255 5.11875 7.75317 4.63125 7.42973 4.27969C7.11098 3.93281 6.65161 3.74531 6.14067 3.74531Z" fill="white"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0364659 14.1975C0.739003 11.379 3.5038 10.057 6.13842 10.057C7.19942 10.057 8.2452 10.2169 9.21644 10.6619C9.59301 10.8344 9.75842 11.2796 9.58589 11.6561C9.41335 12.0327 8.96821 12.1981 8.59164 12.0256C7.87071 11.6953 7.05273 11.557 6.13842 11.557C4.02283 11.557 2.18216 12.5392 1.58452 14.25H6.46654C6.88076 14.25 7.21654 14.5858 7.21654 15C7.21654 15.4142 6.88076 15.75 6.46654 15.75H1.20342C0.293156 15.75 -0.132415 14.8792 0.0362091 14.1985L0.0364659 14.1975Z" fill="white"/>
                         </svg>
-                        <p className="aboutme-section__work--text">I am a teamplayer</p>
+                        <p className="aboutme-section__work--text">I enjoy working in teams</p>
                     </div>
                     <div className="aboutme-section__work--reasons">
                         <svg className="aboutme-section__work--svg" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">

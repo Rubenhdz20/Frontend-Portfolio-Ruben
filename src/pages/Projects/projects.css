@@ -22,6 +22,7 @@
 .projects-section__card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 23rem;
     height: 30rem;
@@ -30,6 +31,7 @@
     border: 2.5px solid #152E77;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .projects-section__card:hover {
@@ -42,6 +44,11 @@
     border-radius: 1rem;
 }
 
+.projects-section__card--img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .projects-section__card--title {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -50,10 +57,11 @@
 .projects-section__card--description {
     padding: .3rem;
     font-size: 1rem;
+    text-align: center;
 }
 
 .projects-section__card--stack {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
@@ -73,12 +81,12 @@
 }
 
 .projects-section__card--links {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
     padding: .4rem; 
+    gap: 9rem;
 }
 
 .projects-section__card--code {
@@ -88,6 +96,8 @@
     text-decoration: none;
     color: #F9F9F9;
     cursor: pointer;
+    border-radius: 8px;
+    background: #152E77;
 }
 
 .projects-section__card--website {
@@ -96,6 +106,8 @@
     font-weight: 600;
     text-decoration: none;
     color: #F9F9F9;
+    border-radius: 8px;
+    background: #152E77;
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
