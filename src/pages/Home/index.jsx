@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import MobileMenu from '../../components/MobileMenu';
 import { LanguageContext } from '../../context/languageProvider';
+import { ThemeContext } from '../../context/themeProvider'; 
 import './home.css'
 
 function Home() {
     const { translations, toggleLanguage } = useContext(LanguageContext);
+    const { theme, toggleTheme } = useContext(ThemeContext); 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navigation = [
@@ -30,7 +32,7 @@ function Home() {
         <>
             {isMobileMenuOpen && (
                     <>
-                        <MobileMenu onClose={toggleMobileMenu} className={isMobileMenuOpen ? 'mobile-container activein' : 'mobile-container activeout'} />
+                        <MobileMenu onClose={toggleMobileMenu} className={isMobileMenuOpen ? `mobile-container activein ${theme}` : `mobile-container activeout ${theme}`} />
                     </>
             )}
             <section id='home' className="hero-container">
@@ -54,7 +56,7 @@ function Home() {
                                     </a>
                                 </li>
                             ))}
-                            <li className='hero__menu-desktop--li'>
+                            <li className='hero__menu-desktop--li' onClick={toggleTheme}>
                                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C10.9142 0 11.25 0.335786 11.25 0.75V3C11.25 3.41421 10.9142 3.75 10.5 3.75C10.0858 3.75 9.75 3.41421 9.75 3V0.75C9.75 0.335786 10.0858 0 10.5 0Z" fill="white"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 17.25C10.9142 17.25 11.25 17.5858 11.25 18V20.25C11.25 20.6642 10.9142 21 10.5 21C10.0858 21 9.75 20.6642 9.75 20.25V18C9.75 17.5858 10.0858 17.25 10.5 17.25Z" fill="white"/>
@@ -80,12 +82,20 @@ function Home() {
                     <div className="hero-container__content">
                         <p>{translations.greeting}<span className='hero-container__name'>Ruben</span></p>
                         <p className='hero-container__position'>{translations.role}</p>
-                        <button className="hero-container__btn">
+                        <button className={`hero-container__btn ${theme}`}>
                             {translations.downloadCV}
-                            <svg className='hero-container__btn-svg' viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.5 1C11.5 0.447715 11.0523 0 10.5 0C9.94771 0 9.5 0.447715 9.5 1V10.5858L6.20711 7.29289C5.81658 6.90237 5.18342 6.90237 4.79289 7.29289C4.40237 7.68342 4.40237 8.31658 4.79289 8.70711L9.79289 13.7071C10.1834 14.0976 10.8166 14.0976 11.2071 13.7071L16.2071 8.70711C16.5976 8.31658 16.5976 7.68342 16.2071 7.29289C15.8166 6.90237 15.1834 6.90237 14.7929 7.29289L11.5 10.5858V1Z" fill="white"/>
-                            <path d="M1.5 12C2.05228 12 2.5 12.4477 2.5 13V17C2.5 17.2652 2.60536 17.5196 2.79289 17.7071C2.98043 17.8946 3.23478 18 3.5 18H17.5C17.7652 18 18.0196 17.8946 18.2071 17.7071C18.3946 17.5196 18.5 17.2652 18.5 17V13C18.5 12.4477 18.9477 12 19.5 12C20.0523 12 20.5 12.4477 20.5 13V17C20.5 17.7957 20.1839 18.5587 19.6213 19.1213C19.0587 19.6839 18.2957 20 17.5 20H3.5C2.70435 20 1.94129 19.6839 1.37868 19.1213C0.81607 18.5587 0.5 17.7957 0.5 17V13C0.5 12.4477 0.947715 12 1.5 12Z" fill="white"/>
-                        </svg>
+
+                            {theme === 'light' ? 
+                                <svg className='hero-container__btn-svg' viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 3C13.5 2.44772 13.0523 2 12.5 2C11.9477 2 11.5 2.44772 11.5 3V12.5858L8.20711 9.29289C7.81658 8.90237 7.18342 8.90237 6.79289 9.29289C6.40237 9.68342 6.40237 10.3166 6.79289 10.7071L11.7929 15.7071C12.1834 16.0976 12.8166 16.0976 13.2071 15.7071L18.2071 10.7071C18.5976 10.3166 18.5976 9.68342 18.2071 9.29289C17.8166 8.90237 17.1834 8.90237 16.7929 9.29289L13.5 12.5858V3Z" fill="#292F36"/>
+                                    <path d="M3.5 14C4.05228 14 4.5 14.4477 4.5 15V19C4.5 19.2652 4.60536 19.5196 4.79289 19.7071C4.98043 19.8946 5.23478 20 5.5 20H19.5C19.7652 20 20.0196 19.8946 20.2071 19.7071C20.3946 19.5196 20.5 19.2652 20.5 19V15C20.5 14.4477 20.9477 14 21.5 14C22.0523 14 22.5 14.4477 22.5 15V19C22.5 19.7957 22.1839 20.5587 21.6213 21.1213C21.0587 21.6839 20.2957 22 19.5 22H5.5C4.70435 22 3.94129 21.6839 3.37868 21.1213C2.81607 20.5587 2.5 19.7957 2.5 19V15C2.5 14.4477 2.94772 14 3.5 14Z" fill="#292F36"/>
+                                </svg> 
+                                :  
+                                <svg className='hero-container__btn-svg' viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 1C11.5 0.447715 11.0523 0 10.5 0C9.94771 0 9.5 0.447715 9.5 1V10.5858L6.20711 7.29289C5.81658 6.90237 5.18342 6.90237 4.79289 7.29289C4.40237 7.68342 4.40237 8.31658 4.79289 8.70711L9.79289 13.7071C10.1834 14.0976 10.8166 14.0976 11.2071 13.7071L16.2071 8.70711C16.5976 8.31658 16.5976 7.68342 16.2071 7.29289C15.8166 6.90237 15.1834 6.90237 14.7929 7.29289L11.5 10.5858V1Z" fill="white"/>
+                                    <path d="M1.5 12C2.05228 12 2.5 12.4477 2.5 13V17C2.5 17.2652 2.60536 17.5196 2.79289 17.7071C2.98043 17.8946 3.23478 18 3.5 18H17.5C17.7652 18 18.0196 17.8946 18.2071 17.7071C18.3946 17.5196 18.5 17.2652 18.5 17V13C18.5 12.4477 18.9477 12 19.5 12C20.0523 12 20.5 12.4477 20.5 13V17C20.5 17.7957 20.1839 18.5587 19.6213 19.1213C19.0587 19.6839 18.2957 20 17.5 20H3.5C2.70435 20 1.94129 19.6839 1.37868 19.1213C0.81607 18.5587 0.5 17.7957 0.5 17V13C0.5 12.4477 0.947715 12 1.5 12Z" fill="white"/>
+                                </svg>
+                            }
                         </button>
                     </div>
                 </div>

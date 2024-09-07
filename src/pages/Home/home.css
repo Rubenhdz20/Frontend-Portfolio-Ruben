@@ -82,13 +82,23 @@
     color: #F9F9F9;
     border-radius: 2rem;
     border: 2px;
-    border-color: #E6E6E6;
-    cursor: pointer;
-    transition: background-color 0.3s; 
+    border-color: #010C15;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-container__btn:hover {
     background-color: #0056b3;
+}
+
+.hero-container__btn.light {
+    background-color: #F9F9F9;
+    color: #292F36;
+}
+
+.hero-container__btn.light:hover {
+    background-color: #E5E7EB;
+    color: #292F36;
 }
 
 .hero-container__btn-svg {

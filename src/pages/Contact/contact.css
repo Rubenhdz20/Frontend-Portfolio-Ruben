@@ -1,7 +1,11 @@
-
 .section-contact {
     background-color: #010C15;
     color: #F9F9F9;
+}
+
+.section-contact.light {
+    background-color: #F9F9F9;
+    color: #010C15;
 }
 
 .section-contact__title {
@@ -40,12 +44,19 @@
 
 .section-contact__email--user {
     width: 13rem;
-    height: 1.5rem;
+    height: 2rem;
+    padding: .1rem;
     border-radius: 10px;
     border: 1px solid #F9F9F9;
     cursor: pointer;
     color: #F9F9F9;
     background-color: #010C15;
+}
+
+.section-contact__email--user.light {
+    cursor: pointer;
+    color: #010C15;
+    background-color: #ECECEC;
 }
 
 .section-contact__email--send {
@@ -60,6 +71,11 @@
 
 .section-contact__email--svg {
     width: 2rem;
+}
+
+.section-contact__email--svg.light {
+    width: 2rem;
+    background-color: #F9F9F9;
 }
 
 .section-contact__media {

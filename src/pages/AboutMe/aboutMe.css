@@ -1,7 +1,11 @@
-
 .aboutme-section {
     background-color: #010C15;
     color: #F9F9F9;
+}
+
+.aboutme-section.light {
+    background-color: #F9F9F9;
+    color: #010C15;
 }
 
 .aboutme-section__content {
@@ -59,13 +63,22 @@
     border-radius: .5rem;
     border: 2px solid #152E77; 
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .aboutme-section__work--reasons:hover {
-    transform: translateY(4px); /* Adds a hover effect */
-    background-color: #2d3559; /* Slightly lighter background on hover */
+    transform: translateY(4px); 
+    background-color: #2d3559; 
 }
+
+.aboutme-section__work--reasons.light {
+   border: 2px solid #E6E6E6;
+}
+
+.aboutme-section__work--reasons.light:hover {
+    background-color: #F9F9F9; 
+}
+ 
 
 .aboutme-section__work--svg {
     width: 1.5rem;
@@ -102,6 +115,10 @@
     height: 4.6rem;
     border-radius: 0.5rem;
     border: 2px solid #152E77;
+}
+
+.aboutme-section__tech--svgs.light {
+    border: 2px solid #E6E6E6;
 }
 
 .aboutme-section__tech--text {
