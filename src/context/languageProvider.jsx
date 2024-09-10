@@ -37,6 +37,7 @@ const translations = {
     projectDescription4: "In this project I was able to apply mathematics and statistics solutions combined with Javascript, this approach has made me go beyond my logical thinking.",
     projectTitle5: "MyFitnessApp",
     projectDescription5: "Open Source Project to inform you about food, recipes and to track your meals, following a healthy diet, the idea is that anyone can use it freely and easily.",
+    contactTitle: "Let's work together!",
     contactDescription: "Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking. I am currently looking for new opportunities, my email is open! ",
     contactSpan: "Copied!",
     contactCredits: "Design & Built by Ruben",
