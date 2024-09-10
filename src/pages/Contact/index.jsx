@@ -39,13 +39,13 @@ function ContactMe() {
                 </p>
             </div>
             <div className='section-contact__email'>
-                <button  className={`section-contact__email--user ${theme}`} id="copyButton" onClick={handleCopyClick}>rubhernandez42@gmail.com</button>
+                <button aria-label="Name"  className={`contact__email ${theme}`} id="copyButton" onClick={handleCopyClick}>rubhernandez42@gmail.com</button>
                 {copied && (
                     <span ref={copiedTextRef} className='contact__container--message'>
                         {translations.contactSpan}
                     </span>
                 )}
-                <button className='section-contact__email--send' onClick={handleEmailClick}>
+                <button aria-label="Name" className='contact__email--svg' onClick={handleEmailClick}>
                     {theme === 'light' ? 
                         <svg className={`section-contact__email--svg ${theme}`} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5378 4.32194L8.88276 11.9588C9.10977 12.283 9.30276 12.6332 9.45776 13.0043L11.3678 17.5924L16.5378 4.32095V4.32194ZM7.53577 10.615L15.1918 2.97714L1.88877 8.13489L6.48777 10.0414C6.85692 10.1941 7.20832 10.3864 7.53577 10.615ZM19.1538 2.77163L13.1268 18.2409C12.7468 19.2186 11.6498 19.7204 10.6778 19.3622C10.441 19.2749 10.2249 19.1397 10.043 18.9651C9.86108 18.7905 9.71733 18.5803 9.62076 18.3476L7.71077 13.7595C7.33912 12.8654 6.627 12.155 5.73077 11.7842L1.13077 9.87875C0.176765 9.48269 -0.259235 8.3823 0.158765 7.41859C0.261258 7.18311 0.409456 6.9702 0.594815 6.79213C0.780175 6.61406 0.99903 6.47435 1.23877 6.38105L16.7448 0.36634C17.0817 0.230885 17.4511 0.19727 17.807 0.269679C18.163 0.342088 18.4897 0.517323 18.7466 0.773575C19.0034 1.02983 19.1791 1.35578 19.2517 1.71087C19.3242 2.06596 19.2905 2.4345 19.1548 2.77063L19.1538 2.77163Z" fill="#0F172A"/>

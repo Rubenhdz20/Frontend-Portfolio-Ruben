@@ -6,7 +6,7 @@ import { ThemeContext } from '../../context/themeProvider';
 import './home.css'
 
 function Home() {
-    const { translations, toggleLanguage } = useContext(LanguageContext);
+    const { language, translations, toggleLanguage } = useContext(LanguageContext);
     const { theme, toggleTheme } = useContext(ThemeContext); 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -26,6 +26,14 @@ function Home() {
     const toggleMobileMenu = () => {
         console.log(isMobileMenuOpen);
         setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const handleDownloadCV = () => {
+        const fileUrl = language === 'en' ? '/CV_Frontend_RubenHernandez_EN.pdf' : '/CV_Frontend_RubenHernandez_ES.pdf';  
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = `CV_Frontend_RubenHernandez_${language === 'en' ? 'English' : 'Spanish'}.pdf`;
+        link.click();
     };
 
     return(
@@ -82,7 +90,7 @@ function Home() {
                     <div className="hero-container__content">
                         <p>{translations.greeting}<span className='hero-container__name'>Ruben</span></p>
                         <p className='hero-container__position'>{translations.role}</p>
-                        <button className={`hero-container__btn ${theme}`}>
+                        <button className={`hero-container__btn ${theme}`}  onClick={handleDownloadCV}>
                             {translations.downloadCV}
 
                             {theme === 'light' ? 

@@ -31,6 +31,7 @@
 }
 
 .aboutme-section__content--description {
+    font-size: 1.2rem;
     max-width: 75rem;
     padding: 1rem;
 }

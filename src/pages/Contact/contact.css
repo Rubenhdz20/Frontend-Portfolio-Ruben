@@ -59,7 +59,18 @@
     background-color: #ECECEC;
 }
 
-.section-contact__email--send {
+.contact__email {
+    border-radius: 15px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; 
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;ne;
+}
+
+.contact__email--svg {
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -70,7 +81,7 @@
 }
 
 .section-contact__email--svg {
-    width: 2rem;
+    width: 2.5rem;
 }
 
 .section-contact__email--svg.light {

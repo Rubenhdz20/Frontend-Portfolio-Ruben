@@ -12,7 +12,9 @@ function AboutMe() {
             <div className="aboutme-section__content">
                 <h1 className="aboutme-section__content--title">{translations.aboutMe}</h1>
                 <img className="aboutme-section__content--avatar" src="/selfie.jpeg" alt="Selfie living an adventure" />
-                <p className="aboutme-section__content--description">{translations.presentation}</p>
+                {translations.presentation.map((paragraph, index) => (
+                    <p key={index} className="aboutme-section__content--description">{paragraph}</p>
+                ))}
             </div>
             <div className="aboutme-section__work">
                 <h2 className="aboutme-section__work--title">{translations.aboutMeTitle}</h2>
