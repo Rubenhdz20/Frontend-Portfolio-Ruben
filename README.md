@@ -20,7 +20,7 @@ Here's a selection of projects featured in this portfolio:
 | # | Project | Description | Tech Stack |
 |---|---|---|---|
 | 1 | **Frontend Portfolio** | My personal portfolio showcasing web projects | React · Vite · TailwindCSS |
-| 2 | **Invoice App** | Create, manage, and track invoices. Responsive UI. | JavaScript |
+| 2 | **Invoice App** | Create, manage, and track invoices. Responsive UI. | JavaScript | Typescript 
 | 3 | **Architecture Web Portfolio** | SPA for architecture showcase with dynamic URL-driven content. | React · Vite · React Router |
 | 4 | **The Movie API** | Film web app pulling from TMDB, supports search & categories. | React · Vite · TailwindCSS |
 | 5 | **My Fitness App** | Meal & recipe tracker for a healthier lifestyle. | TypeScript |
