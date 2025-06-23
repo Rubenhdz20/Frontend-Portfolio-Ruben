@@ -39,7 +39,6 @@ Here's a selection of projects featured in this portfolio:
 
 - **Website**: [rubenhdz.com](https://www.rubenhdz.com)  
 - **GitHub**: [@Rubenhdz20](https://github.com/Rubenhdz20)  
-- **X (Twitter)**: [@rubenhernande90](https://twitter.com/rubenhernande90)  
 - **LinkedIn**: www.linkedin.com/in/ruben-hernandez-alvarado
 
 ---
