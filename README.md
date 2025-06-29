@@ -19,12 +19,12 @@ Here's a selection of projects featured in this portfolio:
 
 | # | Project | Description | Tech Stack |
 |---|---|---|---|
-| 1 | **Frontend Portfolio** | My personal portfolio showcasing web projects | React · Vite · TailwindCSS |
-| 2 | **Invoice App** | Create, manage, and track invoices. Responsive UI. | JavaScript | Typescript 
-| 3 | **Architecture Web Portfolio** | SPA for architecture showcase with dynamic URL-driven content. | React · Vite · React Router |
-| 4 | **The Movie API** | Film web app pulling from TMDB, supports search & categories. | React · Vite · TailwindCSS |
-| 5 | **My Fitness App** | Meal & recipe tracker for a healthier lifestyle. | TypeScript |
-| 6 | **Pet Adoption Website** | Open-source community project to facilitate pet adoptions. | JavaScript / Team Project |
+| 1 | **Invoice App** | Create, manage, and track invoices. Responsive UI. | JavaScript | Typescript 
+| 2 | **Architecture Web Portfolio** | SPA for architecture showcase with dynamic URL-driven content. | React | Vite | React Router 
+| 3 | **Pet Adoption Website** | Open-source community project to facilitate pet adoptions. | JavaScript | React | TailwindCSS | NodeJS 
+| 4 | **The Movie API** | Film web app pulling from TMDB, supports search & categories. | React · Vite · TailwindCSS 
+| 5 | **My Fitness App** | Meal & recipe tracker for a healthier lifestyle. | TypeScript 
+| 6 | **Omnifood** | Website for improve your health based on clean diet | JavaScript 
 
 ---
 
