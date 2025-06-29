@@ -29,7 +29,7 @@ function Home() {
     };
 
     const handleDownloadCV = () => {
-        const fileUrl = language === 'en' ? '/CV_Frontend_RubenHernandez_EN.pdf' : '/CV_Frontend_RubenHernandez_ES.pdf';  
+        const fileUrl = language === 'en' ? '/FrontendDeveloper_RubenHernandez_EN.pdf' : '/FrontendDeveloper_RubenHernandez_ES.pdf';  
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = `CV_Frontend_RubenHernandez_${language === 'en' ? 'English' : 'Spanish'}.pdf`;
@@ -44,7 +44,7 @@ function Home() {
                     </>
             )}
             <section id='home' className="hero-container">
-                <img src="/backgroundImg.jpg" srcset="/backgroundMedium.jpg 602w, /backgroundLarge.jpg 1025w" alt="Creating the future of humanity" />
+                <img src="/blueBackground.jpg" srcset="/blueMediumBackground.jpg 602w, /blueLargeBackground.jpg 1025w" alt="Creating the future of humanity" />
                 <header className="hero-container__header">
                     <p className="hero-container__brandname">RubDev</p>
                     <nav className="hero-container__nav">

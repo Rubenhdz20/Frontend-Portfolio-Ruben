@@ -1,5 +1,5 @@
 .projects-section {
-    background-color: #010C15;
+    background-color: #000000;
     color: #F9F9F9;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -31,7 +31,6 @@
     justify-content: space-between;
     align-items: center;
     width: 23rem;
-    height: 30rem;
     margin-bottom: 5rem;
     border-radius: 1.2rem;
     border: 2.5px solid #152E77;

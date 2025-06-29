@@ -12,6 +12,20 @@ function Projects() {
             <h1 className="projects-section__title">{translations.projectTitle}</h1>
             <div className="projects-section__container-cards">
                 <div className={`projects-section__card ${theme}`}>
+                    <img className="projects-section__card--img" src="/InvoiceApp.png" alt="Invoice App Overview" />
+                    <h2 className="projects-section__card--title">{translations.projectTitle4}</h2>
+                    <p className="projects-section__card--description">{translations.projectDescription4}</p>
+                    <div className="projects-section__card--stack">
+                        <div className={`projects-section__card--technology ${theme}`}>Tailwind</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Typescript</div>
+                        <div className={`projects-section__card--technology ${theme}`}>ReactJS</div>
+                    </div>
+                    <div className="projects-section__card--links">
+                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Invoice-App" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://invoiceappexpenses.netlify.app/" target="_blank">{translations.websiteLink}</a>
+                    </div>
+                </div>
+                <div className={`projects-section__card ${theme}`}>
                     <img className="projects-section__card--img" src="/architecture.jpg" alt="Architecture website overview" />
                     <h2 className="projects-section__card--title">{translations.projectTitle1}</h2>
                     <p className="projects-section__card--description">{translations.projectDescription1}</p>
@@ -70,20 +84,6 @@ function Projects() {
                     <div className="projects-section__card--links">
                         <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Omnifood-Project" target="_blank">{translations.repositoryLink}</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://omnifood-aiweb.netlify.app/" target="_blank">{translations.websiteLink}</a>
-                    </div>
-                </div>
-                <div className={`projects-section__card ${theme}`}>
-                    <img className="projects-section__card--img" src="/salaryProject.jpg" alt="Salary Analysis Overview" />
-                    <h2 className="projects-section__card--title">{translations.projectTitle4}</h2>
-                    <p className="projects-section__card--description">{translations.projectDescription4}</p>
-                    <div className="projects-section__card--stack">
-                        <div className={`projects-section__card--technology ${theme}`}>Html</div>
-                        <div className={`projects-section__card--technology ${theme}`}>Css</div>
-                        <div className={`projects-section__card--technology ${theme}`}>JavaScript</div>
-                    </div>
-                    <div className="projects-section__card--links">
-                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Salary-Analysis" target="_blank">{translations.repositoryLink}</a>
-                        <a className={`projects-section__card--code ${theme}`} href="https://salary-analisis.netlify.app/" target="_blank">{translations.websiteLink}</a>
                     </div>
                 </div>
             </div>
