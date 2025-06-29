@@ -22,6 +22,7 @@ function Projects() {
                     </div>
                     <div className="projects-section__card--links">
                         <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Invoice-App" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/vxj33EYCE7h3ySmItGWI4X/invoice-app?node-id=0-1&t=C410bDeymgJRU7lK-1" target="_blank">Figma</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://invoiceappexpenses.netlify.app/" target="_blank">{translations.websiteLink}</a>
                     </div>
                 </div>
@@ -39,6 +40,21 @@ function Projects() {
                         <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Architecture-Web-Portfolio" target="_blank">{translations.repositoryLink}</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/JkI7BmPPtXbEF56MYyD5qp/Architecture-Website-2.0?node-id=0-1&t=5QzAIg5BtN8P5ISL-1" target="_blank">Figma</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://marianaarquitecta.com/" target="_blank">{translations.websiteLink}</a>
+                    </div>
+                </div>
+                <div className={`projects-section__card ${theme}`}>
+                    <img className="projects-section__card--img" src="/petweb.png" alt="Pet Adoption Website overview" />
+                    <h2 className="projects-section__card--title">{translations.projectTitle6}</h2>
+                    <p className="projects-section__card--description">{translations.projectDescription6}</p>
+                    <div className="projects-section__card--stack">
+                        <div className={`projects-section__card--technology ${theme}`}>Tailwind</div>
+                        <div className={`projects-section__card--technology ${theme}`}>ReactJS</div>
+                        <div className={`projects-section__card--technology ${theme}`}>NodeJs</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Api Rest</div>
+                    </div>
+                    <div className="projects-section__card--links">
+                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Pet-Adoption-Website" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/0uUpcAlHc62C93gJkczIAD/App-para-adopci%C3%B3n-de-mascotas--Copy---Copy-?node-id=61-139&t=zeF4Z7GbCcbJWCdW-1" target="_blank">Figma</a>
                     </div>
                 </div>
                 <div className={`projects-section__card ${theme}`}>

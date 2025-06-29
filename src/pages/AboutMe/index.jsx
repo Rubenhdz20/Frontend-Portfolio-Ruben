@@ -11,7 +11,7 @@ function AboutMe() {
         <section id='about-me' className={`aboutme-section ${theme}`}>
             <div className="aboutme-section__content">
                 <h1 className="aboutme-section__content--title">{translations.aboutMe}</h1>
-                <img className="aboutme-section__content--avatar" src="/selfie.jpeg" alt="Selfie living an adventure" />
+                <img className="aboutme-section__content--avatar" src="/IMG_1516.jpeg" alt="Selfie living an adventure" />
                 {translations.presentation.map((paragraph, index) => (
                     <p key={index} className="aboutme-section__content--description">{paragraph}</p>
                 ))}

@@ -23,11 +23,11 @@
 }
 
 .aboutme-section__content--avatar {
-    width: 14rem;
-    height: 14rem;
+    width: 16rem;
+    height: 16rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    border-radius: 10rem;
+    border-radius: 15rem;
 }
 
 .aboutme-section__content--description {

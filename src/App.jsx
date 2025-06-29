@@ -1,7 +1,7 @@
 import AboutMe from "./pages/AboutMe"
 import ContactMe from "./pages/Contact/INDEX.JSX"
 import Home from "./pages/Home"
-import Projects from "./pages/Projects";
+import Projects from "./pages/projects";
 import { LanguageProvider } from "./context/languageProvider";
 import { ThemeProvider } from "./context/themeProvider";
 
