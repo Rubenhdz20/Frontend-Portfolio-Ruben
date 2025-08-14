@@ -23,7 +23,7 @@ function Projects() {
                     <div className="projects-section__card--links">
                         <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Invoice-App" target="_blank">{translations.repositoryLink}</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/vxj33EYCE7h3ySmItGWI4X/invoice-app?node-id=0-1&t=C410bDeymgJRU7lK-1" target="_blank">Figma</a>
-                        <a className={`projects-section__card--code ${theme}`} href="https://invoiceappexpenses.netlify.app/" target="_blank">{translations.websiteLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://invoice-app.lat/" target="_blank">{translations.websiteLink}</a>
                     </div>
                 </div>
                 <div className={`projects-section__card ${theme}`}>
