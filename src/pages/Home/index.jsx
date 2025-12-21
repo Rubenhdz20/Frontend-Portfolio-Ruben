@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import MobileMenu from '../../components/MobileMenu';
 import { LanguageContext } from '../../context/languageProvider';
@@ -29,7 +29,7 @@ function Home() {
     };
 
     const handleDownloadCV = () => {
-        const fileUrl = language === 'en' ? '/FrontendDeveloper_RubenHernandez_EN.pdf' : '/FrontendDeveloper_RubenHernandez_ES.pdf';  
+        const fileUrl = language === 'en' ? '/Ruben-Hernandez-Alvarado_Frontend-Developer_EN.pdf' : '/Ruben-Hernandez-Alvarado_Frontend-Developer_ES.pdf';  
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = `CV_Frontend_RubenHernandez_${language === 'en' ? 'English' : 'Spanish'}.pdf`;
@@ -44,7 +44,7 @@ function Home() {
                     </>
             )}
             <section id='home' className="hero-container">
-                <img src="/blueBackground.jpg" srcset="/blueMediumBackground.jpg 602w, /blueLargeBackground.jpg 1025w" alt="Creating the future of humanity" />
+                <img src="/blueBackground.jpg" srcSet="/blueMediumBackground.jpg 602w, /blueLargeBackground.jpg 1025w" alt="Creating the future of humanity" />
                 <header className="hero-container__header">
                     <p className="hero-container__brandname">RubDev</p>
                     <nav className="hero-container__nav">
@@ -66,7 +66,7 @@ function Home() {
                             ))}
                             <li className='hero__menu-desktop--li' onClick={toggleTheme}>
                                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C10.9142 0 11.25 0.335786 11.25 0.75V3C11.25 3.41421 10.9142 3.75 10.5 3.75C10.0858 3.75 9.75 3.41421 9.75 3V0.75C9.75 0.335786 10.0858 0 10.5 0Z" fill="white"/>
+                                    <path fillRule="evenodd" clip-rule="evenodd" d="M10.5 0C10.9142 0 11.25 0.335786 11.25 0.75V3C11.25 3.41421 10.9142 3.75 10.5 3.75C10.0858 3.75 9.75 3.41421 9.75 3V0.75C9.75 0.335786 10.0858 0 10.5 0Z" fill="white"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 17.25C10.9142 17.25 11.25 17.5858 11.25 18V20.25C11.25 20.6642 10.9142 21 10.5 21C10.0858 21 9.75 20.6642 9.75 20.25V18C9.75 17.5858 10.0858 17.25 10.5 17.25Z" fill="white"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9247 3.07529C18.2176 3.36819 18.2176 3.84306 17.9247 4.13595L16.3338 5.72689C16.0409 6.01979 15.566 6.01979 15.2731 5.72689C14.9802 5.434 14.9802 4.95913 15.2731 4.66623L16.864 3.0753C17.1569 2.7824 17.6318 2.7824 17.9247 3.07529Z" fill="white"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.72689 15.2731C6.01979 15.566 6.01979 16.0409 5.72689 16.3338L4.13595 17.9247C3.84306 18.2176 3.36819 18.2176 3.07529 17.9247C2.7824 17.6318 2.7824 17.1569 3.0753 16.864L4.66623 15.2731C4.95913 14.9802 5.434 14.9802 5.72689 15.2731Z" fill="white"/>

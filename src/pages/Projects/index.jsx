@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { LanguageContext } from '../../context/languageProvider';
 import { ThemeContext } from '../../context/themeProvider'; 
 import './projects.css';
@@ -12,6 +12,20 @@ function Projects() {
             <h1 className="projects-section__title">{translations.projectTitle}</h1>
             <div className="projects-section__container-cards">
                 <div className={`projects-section__card ${theme}`}>
+                    <img className="projects-section__card--img" src="/COA-Scraper.png" alt="COA Scraper Overview" />
+                    <h2 className="projects-section__card--title">{translations.projectTitle7}</h2>
+                    <p className="projects-section__card--description">{translations.projectDescription7}</p>
+                    <div className="projects-section__card--stack">
+                        <div className={`projects-section__card--technology ${theme}`}>Next.js</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Typescript</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Mistral AI</div>
+                    </div>
+                    <div className="projects-section__card--links">
+                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/COA-Scraper" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://coa-scraper-production.up.railway.app/" target="_blank">{translations.websiteLink}</a>
+                    </div>
+                </div>
+                <div className={`projects-section__card ${theme}`}>
                     <img className="projects-section__card--img" src="/InvoiceApp.png" alt="Invoice App Overview" />
                     <h2 className="projects-section__card--title">{translations.projectTitle4}</h2>
                     <p className="projects-section__card--description">{translations.projectDescription4}</p>
@@ -24,6 +38,21 @@ function Projects() {
                         <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Invoice-App" target="_blank">{translations.repositoryLink}</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/vxj33EYCE7h3ySmItGWI4X/invoice-app?node-id=0-1&t=C410bDeymgJRU7lK-1" target="_blank">Figma</a>
                         <a className={`projects-section__card--code ${theme}`} href="https://invoice-app.lat/" target="_blank">{translations.websiteLink}</a>
+                    </div>
+                </div>
+                 <div className={`projects-section__card ${theme}`}>
+                    <img className="projects-section__card--img" src="/InsuranceWebsite.png" alt="Insurance Website Overview" />
+                    <h2 className="projects-section__card--title">{translations.projectTitle8}</h2>
+                    <p className="projects-section__card--description">{translations.projectDescription8}</p>
+                    <div className="projects-section__card--stack">
+                        <div className={`projects-section__card--technology ${theme}`}>Figma</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Astro</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Tailwind</div>
+                    </div>
+                    <div className="projects-section__card--links">
+                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Insurance-Website" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://www.figma.com/design/8Y9A7IUpg7rfQWpbMFWCsb/Insurance-Website?node-id=38-157&t=TaAVnONKbqKKG008-1" target="_blank">Figma</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://cocomenodozaseguros.com.mx/" target="_blank">{translations.websiteLink}</a>
                     </div>
                 </div>
                 <div className={`projects-section__card ${theme}`}>

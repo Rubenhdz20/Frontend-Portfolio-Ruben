@@ -1,7 +1,8 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 const ThemeProvider = ({ children }) => {
   const savedTheme = localStorage.getItem('theme') || 'light';
 

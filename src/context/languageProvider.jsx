@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 const LanguageContext = createContext();
 
@@ -39,10 +39,14 @@ const translations = {
     projectDescription5: "Open Source Project to inform you about food, recipes and to track your meals, following a healthy diet, the idea is that anyone can use it freely and easily.",
     projectTitle6: "Pet Adoption Website",
     projectDescription6: "Open Source Project to connect potential pet adopters with animal shelters, featuring a user-friendly interface built with React.",
+    projectTitle7: "COA Scraper",
+    projectDescription7: "COA Scraper is an application designed to automate the extraction of key information from cannabis Certificates of Analysis (COAs) in PDF format.",
+    projectTitle8: "Insurance Website",
+    projectDescription8: "Insurance website for a corporate company.",
     contactTitle: "Let's work together!",
     contactDescription: "Thank you for coming here. I hope this portfolio, made with a lot of love, has been to your liking. I am currently looking for new opportunities, my email is open! ",
     contactSpan: "Copied!",
-    contactCredits: "Design & Built by Ruben",
+    contactCredits: "Design & Built by Ruben"
   },
   es: {
     greeting: "Hola, mi nombre es ",
@@ -80,6 +84,10 @@ const translations = {
     projectDescription5: "Proyecto de código abierto para informarte sobre alimentación, recetas y hacer un seguimiento de tus comidas, siguiendo una dieta saludable, la idea es que cualquiera pueda utilizarlo de forma libre y sencilla.",
     projectTitle6: "Sitio web de adopción de mascotas",
     projectDescription6: "Proyecto de código abierto para conectar a posibles adoptantes de mascotas con refugios de animales, con una interfaz fácil de usar construida con React.",
+    projectTitle7: "COA Scraper",
+    projectDescription7: "COA Scraper es una aplicación diseñada para automatizar la extracción de información clave de los Certificados de Análisis (COAs) de cannabis en formato PDF.",
+    projectTitle8: "Insurance Website",
+    projectDescription8: "Sitio web de seguros para una empresa corporativa.",
     contactTitle: "Trabajemos juntos!",
     contactDescription: "Gracias por estar aquí. Espero que este portfolio, hecho con mucho cariño, haya sido de tu agrado. Actualmente estoy buscando nuevas oportunidades, mi email está abierto!  ",
     contactSpan: "Copiado!",
