@@ -67,7 +67,7 @@
     justify-content: center;
     border: none; 
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;ne;
+    transition: transform 0.2s ease-in-out;
 }
 
 .contact__email--svg {
