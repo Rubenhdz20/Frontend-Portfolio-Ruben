@@ -90,7 +90,7 @@ function Home() {
                     <div className="hero-container__content">
                         <p>{translations.greeting}<span className='hero-container__name'>Ruben</span></p>
                         <p className='hero-container__position'>{translations.role}</p>
-                        <button className={`hero-container__btn ${theme}`}  onClick={handleDownloadCV}>
+                        {/* <button className={`hero-container__btn ${theme}`}  onClick={handleDownloadCV}>
                             {translations.downloadCV}
 
                             {theme === 'light' ? 
@@ -104,7 +104,7 @@ function Home() {
                                     <path d="M1.5 12C2.05228 12 2.5 12.4477 2.5 13V17C2.5 17.2652 2.60536 17.5196 2.79289 17.7071C2.98043 17.8946 3.23478 18 3.5 18H17.5C17.7652 18 18.0196 17.8946 18.2071 17.7071C18.3946 17.5196 18.5 17.2652 18.5 17V13C18.5 12.4477 18.9477 12 19.5 12C20.0523 12 20.5 12.4477 20.5 13V17C20.5 17.7957 20.1839 18.5587 19.6213 19.1213C19.0587 19.6839 18.2957 20 17.5 20H3.5C2.70435 20 1.94129 19.6839 1.37868 19.1213C0.81607 18.5587 0.5 17.7957 0.5 17V13C0.5 12.4477 0.947715 12 1.5 12Z" fill="white"/>
                                 </svg>
                             }
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </section>

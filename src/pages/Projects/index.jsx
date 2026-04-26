@@ -11,6 +11,20 @@ function Projects() {
         <section id='mywork' className={`projects-section ${theme}`}>
             <h1 className="projects-section__title">{translations.projectTitle}</h1>
             <div className="projects-section__container-cards">
+                 <div className={`projects-section__card ${theme}`}>
+                    <img className="projects-section__card--img" src="/hidajunk.png" alt="Hida Junk Website Overview" />
+                    <h2 className="projects-section__card--title">{translations.projectTitle9}</h2>
+                    <p className="projects-section__card--description">{translations.projectDescription9}</p>
+                    <div className="projects-section__card--stack">
+                        <div className={`projects-section__card--technology ${theme}`}>Next.js</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Typescript</div>
+                        <div className={`projects-section__card--technology ${theme}`}>Supabase</div>
+                    </div>
+                    <div className="projects-section__card--links">
+                        <a className={`projects-section__card--code ${theme}`} href="https://github.com/Rubenhdz20/Dumpster-Website" target="_blank">{translations.repositoryLink}</a>
+                        <a className={`projects-section__card--code ${theme}`} href="https://hidajunk.com/" target="_blank">{translations.websiteLink}</a>
+                    </div>
+                </div>
                 <div className={`projects-section__card ${theme}`}>
                     <img className="projects-section__card--img" src="/COA-Scraper.png" alt="COA Scraper Overview" />
                     <h2 className="projects-section__card--title">{translations.projectTitle7}</h2>
